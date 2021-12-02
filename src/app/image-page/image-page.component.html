@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <input type="text" [(ngModel)]='searchName'  placeholder="search..">
+    <button (click)='getname()'>click</button>
+
+    <div class="row">
+        <div  *ngFor='let object of id' class="col-md-3">
+        <div class="card"  style="width: 18rem;">
+            <img src="https://live.staticflickr.com/{{object.server}}/{{object.id}}_{{object.secret}}_m.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <!-- <h5 class="card-title">{{object.id}}</h5> -->
+              <p class="card-text">{{object.title}}</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
